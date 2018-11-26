@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/HeapSort.h
+
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
+
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/main.cpp
+iostream
+-
+HeapSort.h
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/HeapSort.h
+MergeSort.h
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
+QuickSort.h
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+
