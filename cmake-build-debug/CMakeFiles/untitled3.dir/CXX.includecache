@@ -6,19 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/HeapSort.h
-
 C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
 
 C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/Stopwatch.h
+windows.h
+-
+sys/time.h
+-
 
 C:/Users/Marcos Ibanez/CLionProjects/untitled3/main.cpp
 iostream
 -
-HeapSort.h
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/HeapSort.h
+fstream
+-
+string
+-
 MergeSort.h
 C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
 QuickSort.h
 C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+Stopwatch.h
+C:/Users/Marcos Ibanez/CLionProjects/untitled3/Stopwatch.h
 
