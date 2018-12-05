@@ -12,83 +12,81 @@ using namespace std;
 
 int main() {
 
-    QuickSort<int> QSort;           // sortingNum = 2 quick sort will be used
-    MergeS<int> MSort;              // sortingNum = 1 merge sort will be used
-
-    int SortingNum = 0;
-    int numOfItems = 0;
-
-    // reading file
-
-    ifstream myfile;
-    myfile.open("numbers.txt");
-
-    // Get the type of queue
-    myfile >> SortingNum;
-    cout << SortingNum << endl;
-
-    // Read in number of items from myfile
-    myfile >> numOfItems;
-    cout << numOfItems << endl;
-
-    // num is the file being read into the array
-    int num =0;
-
-    // array has a very large size in order to account for any type/amount being inserted.
-    int array[10000];
-    for (int j = 0; j < numOfItems ; ++j) {
-
-        // Read in next line from the txt file
-        myfile >> num;
-        array[j] = num;
-    }
-    myfile.close();
-
-    if(SortingNum == 1){
-        MSort.MergeSort(array,array[0], array[numOfItems-1]);
-    }
-    else{
-        QSort.QSort(array,array[0], array[numOfItems-1]);
-    }
 
 ///////////////////////////////////////////////*
 ///         This the program used to measure the differences whe running between the two different algorithms
 ///         The code below will generate integers from 0-10 and numbers from 0-1.
 ///         There are couts which desplay the time for each.
 /// *////////////////////////////////////////////
-    int Max = 100;
+    int Max = 1000;
 
     // tempI is filled with integers
     int tempI[10000];
 
     //tempN is filled with numbers between 0-1 (decimal)
     int tempN[10000];
-    int tempNum = 0;
+    float tempNum = 0;
+    int tempInt = 0;
 
     for (int i = 0; i < Max; i++) {
-        tempI[i] = rand()%11;
+        tempInt = rand() % 11;
+        tempI[i] = tempInt;
     }
+
+
+
+
+
+    QuickSort<int> QSortTest;
+    MergeS<int> MSortTest;
+
+    CStopWatch Timer;
+    Timer.Reset(); //sets the stopwatch to 0
+
+    MSortTest.MergeSort(tempI,0, Max-1);
+    cout << "the total time to run Mergesort for " << Max << " integers is " << Timer.GetElapsedSeconds() << endl;
+    Timer.Reset();
+
+    QSortTest.QSort(tempI,0, Max-1);
+    cout << "the total time to run Quicksort for " << Max << " integers is " << Timer.GetElapsedSeconds() << endl;
+
+
+
+
     for(int m = 0; m < Max; m++){
 
-        // will going from 0-100 / 100 to get only decimals or 1 and 0;
+        // will be going from 0-100 / 100, to get only decimals between 1 and 0;
         tempNum = rand()%101;
         tempNum = tempNum /100;
         tempN[m] = tempNum;
     }
 
+/*
+    QuickSort<int> QSortTest2;
+    MergeS<int> MSortTest2;
+
+    Timer.Reset();
+
+    MSortTest2.MergeSort(tempN,0, Max-1);
+    cout << "the total time to run Mergesort for " << Max << " numbers(decimals) is " << Timer.GetElapsedSeconds() << endl;
+    Timer.Reset();
+
+    QSortTest2.QSort(tempN,0, Max-1);
+    cout << "the total time to run Quicksort for " << Max << " numbers(decimals) is " << Timer.GetElapsedSeconds() << endl;
+    Timer.Reset();
 
 
-    MSort.MergeSort(array,array[0], array[numOfItems-1]);
+*/
 
 
-    QSort.QSort(array,array[0], array[numOfItems-1]);
+
+
 
     // for this case the timer will not start until after the array is filled with numbers
 
 
 
-    CStopWatch Timer;
-    Timer.Reset(); //sets the stopwatch to 0
+
 
 
 

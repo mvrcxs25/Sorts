@@ -53,36 +53,12 @@ public:
     }
 
     void swap(int* arrayA, int* arrayB){
-        int* temp = arrayA;
-        arrayA = arrayB;
-        arrayB = temp;
+        int temp = *arrayA;
+        *arrayA = *arrayB;
+        *arrayB = temp;
     }
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
