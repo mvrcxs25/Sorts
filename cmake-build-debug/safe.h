@@ -51,6 +51,46 @@
  *
  *
  *
+ *
+ *
+ *
+ *
+ *
+ *   int indexL = 0;     // index of left side
+        int indexR = 0;     // index of right side
+        int indexT = 1;     // index of large array
+
+        // create a loop to add the smallest number of either the left or right side.
+        // puts in numbers in increasing order.
+
+        while (indexL < lSize && indexR < rSize) {
+            if (arrL[indexL] <= arrR[indexR]) {
+                arr[indexT] = arrL[indexL];
+                indexL++;
+            } else {
+                arr[indexT] = arrR[indexR];
+                indexR++;
+            }
+            indexT++;
+        }
+
+// two while loops which are constantly putting in the numbers which are now sorted back into the main array.
+        while (indexL < lSize) {
+            arr[indexT] = arrL[indexL];
+            indexT++;
+            indexL++;
+        }
+
+        // will add any leftover numbers into the array
+        while (indexR < rSize) {
+            arr[indexT] = arrR[indexR];
+            indexT++;
+            indexR++;
+
+        }
+    }
+ *
+ *
  * */
 
 #endif //UNTITLED3_SAFE_H

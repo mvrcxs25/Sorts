@@ -18,19 +18,20 @@ int main() {
 ///         The code below will generate integers from 0-10 and numbers from 0-1.
 ///         There are couts which desplay the time for each.
 /// *////////////////////////////////////////////
-    int Max = 1000;
+    int Max = 100000;
 
     // tempI is filled with integers
-    int tempI[10000];
-
+    int *tempI = new int[10000000];      // used only for mergesort
+    int *tempI1 = new int[10000000];     // used only for quick sort
     //tempN is filled with numbers between 0-1 (decimal)
-    int tempN[10000];
+    int tempN[100000];
     float tempNum = 0;
     int tempInt = 0;
 
     for (int i = 0; i < Max; i++) {
         tempInt = rand() % 11;
         tempI[i] = tempInt;
+        tempI1[i] = tempInt;
     }
 
 
@@ -47,7 +48,7 @@ int main() {
     cout << "the total time to run Mergesort for " << Max << " integers is " << Timer.GetElapsedSeconds() << endl;
     Timer.Reset();
 
-    QSortTest.QSort(tempI,0, Max-1);
+    QSortTest.QSort(tempI1,0, Max-1);
     cout << "the total time to run Quicksort for " << Max << " integers is " << Timer.GetElapsedSeconds() << endl;
 
 
