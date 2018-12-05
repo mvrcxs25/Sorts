@@ -26,7 +26,7 @@ public:
         int mid = 0;
         if (first < last)
         {
-            mid = (last+first-1)/2;
+            mid = (last+first)/2;
             // Split the data into two half for the divide and conquer algorithm
             MergeSort(arr, first, mid);
             MergeSort(arr, mid+1, last);
@@ -44,10 +44,14 @@ public:
        int L[10000000];
        int R[10000000];
 
-       for(int j = 0; j < mid ; j++){
+       // splits into two
+       // L is for 0-mid counting mid
+       for(int j = 0; j < mid+1 ; j++){
            L[j] = arr[j];
        }
-       for(int t = last-1; t > mid; t--){
+
+       // R is for mid+1 to last
+       for(int t = mid+1; t <last+1 ; t++){
            R[t] = arr[t];
        }
 
@@ -56,7 +60,7 @@ public:
 
        int i = last;
 
-       while(left > 0 && right >= 0){
+       while(left > 0 && right > 0){
            if(L[left] > R[right]){
                arr[i] = L[left];
                left--;
