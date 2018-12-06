@@ -18,7 +18,7 @@ int main() {
 ///         The code below will generate integers from 0-10 and numbers from 0-1.
 ///         There are couts which desplay the time for each.
 /// *////////////////////////////////////////////
-    int Max = 1000;
+    int Max = 1000000;
 
     // tempI is filled with integers
     int *tempI = new int[10000000];      // used only for mergesort
@@ -28,14 +28,13 @@ int main() {
     float tempNum = 0;
     int tempInt = 0;
 
+    time(nullptr);
+
     for (int i = 0; i < Max; i++) {
         tempInt = rand() % 11;
         tempI[i] = tempInt;
         tempI1[i] = tempInt;
     }
-
-
-
 
 
     QuickSort<int> QSortTest;

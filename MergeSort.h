@@ -41,8 +41,8 @@ public:
             return;
         }
 
-       int L[10000000];
-       int R[10000000];
+        int *L = new int[10000000];      // used only for mergesort
+        int *R = new int[10000000];
 
        // splits into two
        // L is for 0-mid counting mid

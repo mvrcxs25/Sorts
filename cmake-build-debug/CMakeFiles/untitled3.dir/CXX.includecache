@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/MergeSort.h
 
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/QuickSort.h
 
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/Stopwatch.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/Stopwatch.h
 windows.h
 -
 sys/time.h
 -
 
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/main.cpp
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/main.cpp
 iostream
 -
 fstream
@@ -24,9 +24,9 @@ fstream
 string
 -
 MergeSort.h
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/MergeSort.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/MergeSort.h
 QuickSort.h
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/QuickSort.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/QuickSort.h
 Stopwatch.h
-C:/Users/Marcos Ibanez/CLionProjects/untitled3/Stopwatch.h
+/Users/michaelibanez/CLionProjects/GitHub/Sorts/Stopwatch.h
 
