@@ -50,7 +50,7 @@ public:
            L[j] = arr[j];
        }
 
-       // R is for mid+1 to last
+       // R is for mid+1 to lasta
        for(int t = mid+1; t <last+1 ; t++){
            R[t] = arr[t];
        }
