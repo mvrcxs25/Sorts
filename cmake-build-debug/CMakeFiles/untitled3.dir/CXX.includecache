@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/michaelibanez/CLionProjects/GitHub/Sorts/MergeSort.h
+iostream
+-
 
 /Users/michaelibanez/CLionProjects/GitHub/Sorts/QuickSort.h
 

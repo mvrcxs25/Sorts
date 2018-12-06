@@ -4,7 +4,7 @@
 
 #ifndef UNTITLED3_MERGESORT_H
 #define UNTITLED3_MERGESORT_H
-
+#include<iostream>
 using namespace std;
 
 
@@ -18,74 +18,71 @@ template <class Type>
 class MergeS{
 private:
 
-
 public:
 
-    void MergeSort(int *arr, int first, int last)
+    int * MergeSort(int *arr, int first, int last)
     {
-        int mid = 0;
+        int mid;
         if (first < last)
         {
             mid = (last+first)/2;
             // Split the data into two half for the divide and conquer algorithm
-            MergeSort(arr, first, mid);
-            MergeSort(arr, mid+1, last);
+            arr = MergeSort(arr, first, mid);
+            arr = MergeSort(arr, mid+1, last);
 
             // Merge them to get sorted output.
-            Merge(arr, first, mid, last);
+            arr = Merge(arr, first, mid, last);
         }
+
+        return arr;
     }
 
-    void Merge(int *arr, int first, int mid, int last) {
+    int * Merge(int *arr, int first, int mid, int last) {
         if(arr[mid] <= arr[mid+1]){
-            return;
+            return arr;
         }
 
-        int *L = new int[10000000];      // used only for mergesort
-        int *R = new int[10000000];
+        int n1 = mid - first + 1;
+        int n2 =  last - mid;
+        int init = first, l = 0, r = 0;
 
-       // splits into two
-       // L is for 0-mid counting mid
-       for(int j = 0; j < mid+1 ; j++){
-           L[j] = arr[j];
-       }
+        int L[n1], R[n2];
 
-       // R is for mid+1 to lasta
-       for(int t = mid+1; t <last+1 ; t++){
-           R[t] = arr[t];
-       }
+        for (int i = 0; i < n1; i++)
+            L[i] = arr[first + i];
+        for (int j = 0; j < n2; j++)
+            R[j] = arr[mid + 1+ j];
 
-       int left = mid-first+1;
-       int right = last-mid;
+        while (r < n2 && l < n1)
+        {
+            if (L[l] <= R[r])
+            {
+                arr[init] = L[l];
+                l++;
+            }
+            else
+            {
+                arr[init] = R[r];
+                r++;
+            }
+            init++;
+        }
 
-       int i = last;
+        while (l < n1)
+        {
+            arr[init] = L[l];
+            l++;
+            init++;
+        }
 
-       while(left > 0 && right > 0){
-           if(L[left] > R[right]){
-               arr[i] = L[left];
-               left--;
-           }
-           else{
-               arr[i] = R[right];
-               right--;
-           }
-           i--;
-       }
+        while (r < n2)
+        {
+            arr[init] = R[r];
+            r++;
+            init++;
+        }
 
-       while(left > 0){
-           arr[i] = L[left];
-           left--;
-           i--;
-       }
-
-       while(right > 0){
-           arr[i] = R[right];
-           right--;
-           i--;
-       }
-
-
-
+        return arr;
     }
 };
 
