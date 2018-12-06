@@ -18,7 +18,7 @@ int main() {
 ///         The code below will generate integers from 0-10 and numbers from 0-1.
 ///         There are couts which desplay the time for each.
 /// *////////////////////////////////////////////
-    int Max = 1000000;
+    int Max = 100000;
 
     // tempI is filled with integers
     int *tempI = new int[10000000];      // used only for mergesort
